@@ -9,8 +9,7 @@ int main(){
     cout << "Digite dois números: ";
     cin >> n1;
     cin >> n2;
-   //int n2int = n2 - 0;
 
-   //cout << "A multiplicação entre eles é: " << n1*(n2) << endl;
+   cout << "A multiplicação entre eles é: " << n1*atoi(n2) << endl;
 
 }

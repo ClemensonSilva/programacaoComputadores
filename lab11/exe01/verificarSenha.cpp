@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 using namespace std;
 
@@ -9,11 +10,11 @@ int main(){
     cout << "digite sua senha: ";
     cin >> senha;
 
-    if (suasenha[0]==senha[0] && suasenha[0]==senha[0] && suasenha[0]==senha[0]) {
+    if (strcmp(suasenha, senha)==0 )
         cout << "Senha correta";
-    }else{
+    else
         cout << "Senha incorreta";
-    }
+
 
     return 0;
 }
