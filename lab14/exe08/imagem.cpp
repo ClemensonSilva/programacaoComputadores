@@ -20,14 +20,18 @@ int main()
     imagem.tipoImagem = JPG;
 
     Imagem *ptr = &imagem;
-    mostrarDetalhes(&imagem);
+    mostrarDetalhes(*ptr);
 }
 
-
 void mostrarDetalhes(Imagem &imagem){
-    Imagem *ptr ;
-    *ptr = imagem;
-    cout << "A imagem " << ptr->nome << "com tamanho "<<
-    ptr->altura <<"x" << ptr->largura << "tem formato " <<
-    ptr->tipoImagem<< endl;
+    cout << "A imagem '" << imagem.nome << "' com tamanho "<<
+    imagem.altura <<"x" << imagem.largura ;
+
+    if(imagem.tipoImagem==0)
+        cout << " tem formato JPG" << endl;
+    else if(imagem.tipoImagem==1)
+        cout << " tem formato PNG" << endl;
+    else if(imagem.tipoImagem==2)
+        cout << " tem formato BMP" << endl;
+
 }
